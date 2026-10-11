@@ -36,6 +36,15 @@ h2{font-size:21px;font-weight:800;letter-spacing:-.01em;margin:40px 0 14px}
 .price .amt small{font-size:20px;color:var(--muted);font-weight:500}
 .price .note{color:var(--muted);font-size:14.5px;margin-top:10px}
 .price .note b{color:var(--text);font-weight:600}
+.addon{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--card);border:1px dashed rgba(214,184,128,.45);border-radius:14px;padding:16px 18px;margin-top:12px}
+.addon b{display:block;font-size:15px}
+.addon small{display:block;color:var(--muted);font-size:13px;font-weight:300;line-height:1.5}
+.addon .ap{flex-shrink:0;font-size:22px;font-weight:800;color:var(--gold);white-space:nowrap}
+.addon .ap small{display:inline;font-size:12px;color:var(--muted);font-weight:500}
+.chk{display:flex;gap:10px;align-items:center;margin-top:16px;font-size:15px;font-weight:600}
+.chk input{width:22px;height:22px;accent-color:var(--gold);flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-weight:300;font-size:13px}
+@media (max-width:480px){.addon{flex-direction:column;align-items:flex-start}}
 .terms{color:var(--muted);font-size:14px;line-height:1.7}
 .terms p+p{margin-top:6px}
 label.f{display:block;font-size:15px;font-weight:600;margin:16px 0 8px}
@@ -94,6 +103,10 @@ input:focus{outline:none;border-color:var(--gold)}
   <div class="amt">2,500 <small>₪ + מע״מ</small></div>
   <div class="note">הכול כלול, בלי תוספות בדרך<br><b>חצי עם האישור, חצי במסירה</b> (1,462.50 ₪ כל תשלום)</div>
 </div>
+<div class="addon">
+  <div><b>תוספת אופציונלית: דף נחיתה</b><small>דף אינטרנט אחד בעיצוב הסרטון, עם הסרטון, פרטי המתחם וכפתור וואטסאפ. מתאים למודעות ולקישור בביו.</small></div>
+  <div class="ap">+500 <small>₪ + מע״מ</small></div>
+</div>
 
 <h2>איך זה עובד</h2>
 <div class="card terms">
@@ -113,6 +126,7 @@ input:focus{outline:none;border-color:var(--gold)}
       <label class="opt"><input type="radio" name="pay" value="ביט"><span>📱 ביט</span></label>
       <label class="opt"><input type="radio" name="pay" value="העברה בנקאית"><span>🏦 העברה</span></label>
     </div>
+    <label class="chk"><input type="checkbox" id="lp"><span>רוצה גם דף נחיתה<small>תוספת 500 ₪ + מע״מ</small></span></label>
     <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
     <div class="err" id="err"></div>
     <button class="btn btn-gold" id="send" type="submit">מאשר את ההצעה ←</button>
@@ -140,15 +154,16 @@ f.addEventListener('submit',async e=>{
   const pay=(f.querySelector('input[name=pay]:checked')||{}).value;
   if(!name){err.textContent='רק השם חסר.';err.classList.add('show');return}
   if(!pay){err.textContent='בחר איך נוח לך לשלם: ביט או העברה.';err.classList.add('show');return}
+  const lp=document.getElementById('lp').checked;
   const btn=document.getElementById('send'); btn.disabled=true; btn.textContent='שולח…';
-  const msg=`היי מאיר, אני ${name} ואני מאשר את הצעת המחיר לסרטון (2,500 ₪ + מע״מ). אשלם ב${pay}. שלח לי בבקשה את פרטי התשלום.`;
+  const msg=`היי מאיר, אני ${name} ואני מאשר את הצעת המחיר לסרטון (2,500 ₪ + מע״מ)${lp?' + דף נחיתה (500 ₪ + מע״מ)':''}. אשלם ב${pay}. שלח לי בבקשה את פרטי התשלום.`;
   document.getElementById('waLink').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
   try{
     if(!f.website.value){
       const fd=new FormData(); fd.append('access_key',WEB3FORMS_KEY);
       fd.append('subject','✅ אישור הצעת מחיר — סרטון למתחם — '+name);
       fd.append('from_name','AI Lab · הצעת מחיר סרטון');
-      fd.append('Name',name); fd.append('Payment',pay); fd.append('Approved','כן');
+      fd.append('Name',name); fd.append('Payment',pay); fd.append('Approved','כן'); fd.append('LandingPage',lp?'כן (+500)':'לא');
       fd.append('Page',location.href); fd.append('Time',new Date().toLocaleString('he-IL'));
       const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:fd}); const j=await r.json(); if(!j.success) throw new Error(j.message);
     }
