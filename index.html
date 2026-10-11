@@ -36,7 +36,17 @@ h2{font-size:21px;font-weight:800;letter-spacing:-.01em;margin:40px 0 14px}
 .price .amt small{font-size:20px;color:var(--muted);font-weight:500}
 .price .note{color:var(--muted);font-size:14.5px;margin-top:10px}
 .price .note b{color:var(--text);font-weight:600}
-.addon{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--card);border:1px dashed rgba(214,184,128,.45);border-radius:14px;padding:16px 18px;margin-top:12px}
+.addon{display:flex;align-items:center;gap:14px;background:var(--card);border:1px dashed rgba(214,184,128,.45);border-radius:14px;padding:16px 18px;margin-top:12px;cursor:pointer;position:relative;transition:border-color .15s,background .15s}
+.addon .tx{flex:1}
+.addon input{position:absolute;opacity:0;width:0;height:0}
+.addon .box{flex-shrink:0;width:26px;height:26px;border:2px solid rgba(214,184,128,.6);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#0b0d12}
+.addon:has(input:checked){border:1.5px solid var(--gold);background:rgba(214,184,128,.08)}
+.addon:has(input:checked) .box{background:var(--gold);border-color:var(--gold)}
+.addon:has(input:checked) .box::after{content:"✓"}
+.addon.plain{cursor:default;border-style:solid;border-color:var(--line)}
+.addon.plain .ap{color:var(--muted)}
+.sum{margin-top:16px;font-size:15px;color:var(--muted)}
+.sum b{color:var(--text)}
 .addon b{display:block;font-size:15px}
 .addon small{display:block;color:var(--muted);font-size:13px;font-weight:300;line-height:1.5}
 .addon .ap{flex-shrink:0;font-size:22px;font-weight:800;color:var(--gold);white-space:nowrap}
@@ -44,7 +54,7 @@ h2{font-size:21px;font-weight:800;letter-spacing:-.01em;margin:40px 0 14px}
 .chk{display:flex;gap:10px;align-items:center;margin-top:16px;font-size:15px;font-weight:600}
 .chk input{width:22px;height:22px;accent-color:var(--gold);flex-shrink:0}
 .chk small{display:block;color:var(--muted);font-weight:300;font-size:13px}
-@media (max-width:480px){.addon{flex-direction:column;align-items:flex-start}}
+@media (max-width:480px){.addon{padding:14px}.addon .ap{font-size:18px}}
 .terms{color:var(--muted);font-size:14px;line-height:1.7}
 .terms p+p{margin-top:6px}
 label.f{display:block;font-size:15px;font-weight:600;margin:16px 0 8px}
@@ -103,9 +113,15 @@ input:focus{outline:none;border-color:var(--gold)}
   <div class="amt">2,500 <small>₪ + מע״מ</small></div>
   <div class="note">הכול כלול, בלי תוספות בדרך<br><b>חצי עם האישור, חצי במסירה</b> (1,462.50 ₪ כל תשלום)</div>
 </div>
-<div class="addon">
-  <div><b>תוספת אופציונלית: דף נחיתה</b><small>דף אינטרנט אחד בעיצוב הסרטון, עם הסרטון, פרטי המתחם וכפתור וואטסאפ. מתאים למודעות ולקישור בביו.</small></div>
+<label class="addon" for="lp">
+  <input type="checkbox" id="lp">
+  <span class="box"></span>
+  <div class="tx"><b>תוספת: דף נחיתה</b><small>דף אינטרנט אחד בעיצוב הסרטון, עם הסרטון, פרטי המתחם וכפתור וואטסאפ. מתאים למודעות ולקישור בביו. <u>לחץ כדי להוסיף</u></small></div>
   <div class="ap">+500 <small>₪ + מע״מ</small></div>
+</label>
+<div class="addon plain">
+  <div class="tx"><b>אתר טכנולוגי מושקע</b><small>אתר מלא עם מספר דפים, טפסים ומערכת ניהול. תמחור נפרד לפי אפיון.</small></div>
+  <div class="ap" style="font-size:15px">תמחור נפרד</div>
 </div>
 
 <h2>איך זה עובד</h2>
@@ -126,7 +142,7 @@ input:focus{outline:none;border-color:var(--gold)}
       <label class="opt"><input type="radio" name="pay" value="ביט"><span>📱 ביט</span></label>
       <label class="opt"><input type="radio" name="pay" value="העברה בנקאית"><span>🏦 העברה</span></label>
     </div>
-    <label class="chk"><input type="checkbox" id="lp"><span>רוצה גם דף נחיתה<small>תוספת 500 ₪ + מע״מ</small></span></label>
+    <div class="sum" id="sum">סה״כ לאישור: <b>2,500 ₪ + מע״מ</b></div>
     <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
     <div class="err" id="err"></div>
     <button class="btn btn-gold" id="send" type="submit">מאשר את ההצעה ←</button>
@@ -148,6 +164,8 @@ input:focus{outline:none;border-color:var(--gold)}
 <script>
 const WEB3FORMS_KEY='9ba5abaf-d501-44db-a33d-d5028c89e0ef', WA='972546500795';
 const f=document.getElementById('f'),err=document.getElementById('err');
+const lpBox=document.getElementById('lp'),sum=document.getElementById('sum');
+lpBox.addEventListener('change',()=>{sum.innerHTML=lpBox.checked?'סה״כ לאישור: <b>3,000 ₪ + מע״מ</b> (סרטון 2,500 + דף נחיתה 500)':'סה״כ לאישור: <b>2,500 ₪ + מע״מ</b>'});
 f.addEventListener('submit',async e=>{
   e.preventDefault(); err.classList.remove('show');
   const name=document.getElementById('name').value.trim();
