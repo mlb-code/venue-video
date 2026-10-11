@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>הצעת מחיר · סרטון תדמית למתחם</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d12;--bg2:#12151c;--card:#161a23;--line:rgba(255,255,255,.09);--text:#f2f1ec;--muted:#a8aab2;--dim:#6f727b;--gold:#d6b880;--gold2:#b8975e;--green:#7fd1a0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Heebo",-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--gold)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.top b{color:var(--text);font-weight:700}
+.hero{padding:56px 0 28px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.26em;color:var(--gold);font-weight:700;margin-bottom:16px}
+h1{font-size:40px;font-weight:800;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+h1 span{color:var(--gold)}
+.lead{color:var(--muted);font-size:17px;font-weight:300;max-width:600px;margin:0 auto 26px}
+.for{display:inline-flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:10px;padding:12px 26px;background:rgba(255,255,255,.02)}
+.for .k{font-size:11px;letter-spacing:.18em;color:var(--gold);font-weight:600}
+.for .v{font-size:16px;font-weight:600}
+.video{margin:34px auto 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.5);background:#000}
+.video video{display:block;width:100%;height:auto}
+.cap{font-size:13px;color:var(--dim);margin-top:12px;text-align:center}
+section{padding:48px 0 0}
+h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);font-size:15px;font-weight:300;margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 26px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.item{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.item .c{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(214,184,128,.14);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;margin-top:3px}
+.item b{font-weight:700}
+.item small{display:block;color:var(--muted);font-weight:300;font-size:13.5px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 14px;text-align:center}
+.step .n{width:38px;height:38px;margin:0 auto 12px;border:1.5px solid var(--gold);color:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800}
+.step h4{font-size:15px;font-weight:700;margin-bottom:4px}
+.step p{font-size:12.5px;color:var(--muted);font-weight:300;line-height:1.45}
+.price{background:linear-gradient(160deg,#1a1d27,#10131a);border:1.5px solid var(--gold2);border-radius:16px;padding:34px 30px;text-align:center;position:relative;overflow:hidden}
+.price::before{content:"";position:absolute;top:-120px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(214,184,128,.14),transparent 70%)}
+.price .reg{color:var(--dim);font-size:14px;text-decoration:line-through;margin-bottom:4px}
+.price .tag{display:inline-block;font-size:11px;letter-spacing:.14em;font-weight:700;color:#0b0d12;background:var(--gold);padding:5px 12px;border-radius:20px;margin-bottom:14px}
+.price .amt{font-size:56px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.price .amt small{font-size:20px;color:var(--muted);font-weight:500}
+.price .note{color:var(--muted);font-size:14px;margin-top:8px}
+.price .why{margin:22px auto 0;max-width:560px;color:var(--muted);font-size:14.5px;font-weight:300;border-top:1px solid var(--line);padding-top:18px;text-align:right}
+.price .why b{color:var(--text);font-weight:600}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.pay div{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px}
+.pay div b{display:block;font-size:18px;color:var(--gold);font-weight:800}
+.terms ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.terms li{display:flex;gap:10px;font-size:14px;color:var(--muted)}
+.terms li::before{content:"•";color:var(--gold);font-weight:800}
+/* approval form */
+.approve{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px}
+label.f{display:block;font-size:14px;font-weight:600;margin:16px 0 6px}
+input[type=text],input[type=tel]{width:100%;background:#0e1118;border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--text);font:inherit;font-size:16px}
+input:focus{outline:none;border-color:var(--gold)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.opt span{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;padding:14px;font-weight:600;font-size:15px;background:#0e1118}
+.opt input:checked+span{border-color:var(--gold);background:rgba(214,184,128,.1);color:var(--gold)}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:14px;color:var(--muted)}
+.chk input{width:20px;height:20px;margin-top:2px;accent-color:var(--gold);flex-shrink:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 30px;border-radius:10px;font:inherit;font-size:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#0b0d12;width:100%;margin-top:20px}
+.btn-gold:disabled{opacity:.6;cursor:default;transform:none}
+.btn-line{background:transparent;color:var(--text);border:1.5px solid rgba(255,255,255,.25)}
+.btn-wa{background:#25d366;color:#07140c}
+.err{display:none;background:rgba(255,99,99,.12);border:1px solid rgba(255,99,99,.35);color:#ffb3b3;border-radius:10px;padding:12px;margin-top:14px;font-size:14px}
+.err.show{display:block}
+.done{display:none;text-align:center}
+.done.show{display:block}
+.done .big{font-size:44px;margin-bottom:8px}
+.done h3{font-size:22px;font-weight:800;margin-bottom:8px}
+.done p{color:var(--muted);font-size:15px;margin-bottom:20px}
+.done .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.foot{text-align:center;padding:56px 0 48px;color:var(--dim);font-size:13px}
+.foot b{color:var(--muted);font-weight:600;display:block;margin-bottom:4px}
+.foot a{color:var(--muted);text-decoration:none}
+@media (max-width:640px){
+  h1{font-size:29px}.lead{font-size:15px}
+  .grid,.pay,.opts{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .card,.approve{padding:22px 18px}
+  .price{padding:28px 18px}.price .amt{font-size:46px}
+  section{padding-top:38px}h2{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top"><b>AI Lab · מאיר לביא</b><span>הצעת מחיר · אוקטובר 2026</span></div>
+
+<section class="hero" style="padding-top:48px">
+  <div class="eyebrow">סרטון תדמית בבינה מלאכותית</div>
+  <h1>המתחם שלך,<br><span>לפני שהוא נפתח.</span></h1>
+  <p class="lead">סרטון קולנועי של עד 90 שניות שמציג את כל המתחם מתוך ההדמיות הקיימות, עם אנשים אמיתיים למראה, שיחה בעברית ואווירה של מקום שכבר חי.</p>
+  <div class="for"><span class="k">הוכן עבור</span><span class="v" id="clientName">המתחם החדש</span></div>
+
+  <div class="video"><video src="demo.mp4" controls playsinline preload="metadata" poster="poster.jpg"></video></div>
+  <div class="cap">טעימה של 14 שניות שנבנתה מההדמיות שלך. הסרטון המלא ייבנה באותה רמה, לפי תסריט שתבחר.</div>
+</section>
+
+<section>
+  <h2>מה כלול</h2>
+  <p class="sub">הכול מקצה לקצה. אתה בוחר, מאשר ומקבל.</p>
+  <div class="card grid">
+    <div class="item"><span class="c">✓</span><div><b>סרטון עד 90 שניות</b><small>מציג את כל אזורי המתחם: עמדות עבודה, חדרי ישיבות, אולם הכנסים, הבר והלאונג'</small></div></div>
+    <div class="item"><span class="c">✓</span><div><b>שלושה תסריטים לבחירה</b><small>אחרי השאלון תקבל שלוש גישות שונות, ותבחר את זו שמרגישה נכון</small></div></div>
+    <div class="item"><span class="c">✓</span><div><b>שיחה בין אנשים, בעברית</b><small>סצנות עם דמויות שמדברות, לא רק קריינות על תמונות</small></div></div>
+    <div class="item"><span class="c">✓</span><div><b>סטוריבורד לאישור לפני הפקה</b><small>רואים כל סצנה כתמונה ומאשרים, בלי הפתעות</small></div></div>
+    <div class="item"><span class="c">✓</span><div><b>לרוחב ולאורך</b><small>גרסה 16:9 לאתר, ליוטיוב ולמסכים, וגרסה 9:16 לאינסטגרם, לטיקטוק ולסטורי</small></div></div>
+    <div class="item"><span class="c">✓</span><div><b>קאטים של 15 ו-30 שניות</b><small>מוכנים למודעות ממומנות, מאותו חומר</small></div></div>
+    <div class="item"><span class="c">✓</span><div><b>מוזיקה מקורית וקול</b><small>מוזיקה שנוצרה במיוחד לסרטון, ללא זכויות צד שלישי, וקריינות במידת הצורך</small></div></div>
+    <div class="item"><span class="c">✓</span><div><b>שני סבבי תיקונים</b><small>אחרי הגרסה הראשונה, כדי לדייק את מה שחשוב לך</small></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>איך זה עובד</h2>
+  <p class="sub">כעשרה ימי עבודה מהשאלון ועד המסירה, רובם המתנה לאישורים שלך.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h4>שאלון</h4><p>10 דקות אונליין + שליחת ההדמיות והלוגו</p></div>
+    <div class="step"><div class="n">2</div><h4>3 תסריטים</h4><p>אתה בוחר אחד, אפשר לשלב</p></div>
+    <div class="step"><div class="n">3</div><h4>סטוריבורד</h4><p>כל סצנה כתמונה, לאישור</p></div>
+    <div class="step"><div class="n">4</div><h4>הפקה</h4><p>וידאו, קול, מוזיקה, עריכה</p></div>
+    <div class="step"><div class="n">5</div><h4>מסירה</h4><p>כל הגרסאות + 2 סבבי תיקונים</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>המחיר</h2>
+  <p class="sub">מחיר אחד, הכול כלול, בלי תוספות בדרך.</p>
+  <div class="price">
+    <div class="reg">מחיר מלא לחבילה: 5,900 ₪</div>
+    <div class="tag">מחיר השקה ללקוח ראשון</div>
+    <div class="amt">2,500 <small>₪ + מע״מ</small></div>
+    <div class="note">סה״כ 2,925 ₪ כולל מע״מ · כל מה שמופיע למעלה כלול</div>
+    <div class="why">
+      <b>למה המחיר הזה?</b> אתה הלקוח הראשון שלי בסרטונים, ואתה מכיר אותי. בתמורה למחיר ההשקה אני מבקש שלושה דברים קטנים: להשתמש בסרטון כדוגמה בתיק העבודות שלי, המלצה קצרה בכתב כשתהיה מרוצה, והפניה של מישהו אחד שהסרטון מתאים לו.
+    </div>
+    <div class="pay">
+      <div><b>1,462.50 ₪</b>עם אישור ההצעה ומילוי השאלון (50%)</div>
+      <div><b>1,462.50 ₪</b>במסירת הסרטון הסופי (50%)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card terms">
+    <h2 style="font-size:18px;margin-bottom:14px">תנאים</h2>
+    <ul>
+      <li>המחיר כולל את כל עלויות ההפקה, הכלים והמוזיקה. אין עלויות נסתרות.</li>
+      <li>כלולים שני סבבי תיקונים אחרי הגרסה הראשונה. סבב שלישי ומעלה: 300 ₪ לסבב.</li>
+      <li>שינוי תסריט אחרי אישור הסטוריבורד נחשב להפקה מחדש ומתומחר בנפרד. לכן האישור בשלב הסטוריבורד חשוב.</li>
+      <li>המסירה בקבצי MP4 באיכות מלאה, לשימוש חופשי שלך בכל ערוץ וללא הגבלת זמן.</li>
+      <li>לוחות זמנים: כעשרה ימי עבודה, בהנחה שהאישורים מתקבלים תוך יומיים בכל שלב.</li>
+      <li>תוקף ההצעה: 14 יום. המחירים אינם כוללים מע״מ אלא אם צוין אחרת.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="approve">
+  <h2>אישור ההצעה</h2>
+  <p class="sub">שתי שאלות, ואתה עובר ישר לשאלון.</p>
+  <div class="approve">
+    <form id="f" novalidate>
+      <label class="f" for="name">השם שלך</label>
+      <input type="text" id="name" name="name" autocomplete="name" placeholder="שם מלא">
+      <label class="f">איך נוח לך לשלם?</label>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="pay" value="ביט"><span>📱 ביט</span></label>
+        <label class="opt"><input type="radio" name="pay" value="העברה בנקאית"><span>🏦 העברה בנקאית</span></label>
+      </div>
+      <label class="chk"><input type="checkbox" id="ok"><span>קראתי את ההצעה ואני מאשר אותה: סרטון עד 90 שניות, 2,500 ₪ + מע״מ, 50% עכשיו ו-50% במסירה.</span></label>
+      <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="err" id="err"></div>
+      <button class="btn btn-gold" id="send" type="submit">מאשר את ההצעה ←</button>
+    </form>
+    <div class="done" id="done">
+      <div class="big">🎬</div>
+      <h3>מעולה, יוצאים לדרך</h3>
+      <p>קיבלתי את האישור. פרטי התשלום יגיעו אליך בוואטסאפ. השלב הבא לוקח כעשר דקות: השאלון שממנו ייבנו התסריטים.</p>
+      <div class="row">
+        <a class="btn btn-gold" style="width:auto;margin:0" href="brief/">למילוי השאלון ←</a>
+        <a class="btn btn-line" id="waLink" href="#" target="_blank" rel="noopener">לכתוב לי בוואטסאפ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="foot"><b>AI Lab · מאיר לביא</b><a href="mailto:laviemb@gmail.com">laviemb@gmail.com</a> · <a href="https://pro.ai-lab.co.il" target="_blank" rel="noopener">pro.ai-lab.co.il</a><div style="margin-top:14px">ההצעה הוכנה באוקטובר 2026 · בתוקף ל-14 יום</div></div>
+
+</div>
+<script>
+const WEB3FORMS_KEY='9ba5abaf-d501-44db-a33d-d5028c89e0ef', WA='972546500795';
+const f=document.getElementById('f'),err=document.getElementById('err');
+f.addEventListener('submit',async e=>{
+  e.preventDefault(); err.classList.remove('show');
+  const name=document.getElementById('name').value.trim();
+  const pay=(f.querySelector('input[name=pay]:checked')||{}).value;
+  if(!name){err.textContent='רק השם חסר.';err.classList.add('show');return}
+  if(!pay){err.textContent='בחר איך נוח לך לשלם: ביט או העברה.';err.classList.add('show');return}
+  if(!document.getElementById('ok').checked){err.textContent='סמן את תיבת האישור כדי להמשיך.';err.classList.add('show');return}
+  const btn=document.getElementById('send'); btn.disabled=true; btn.textContent='שולח…';
+  const msg=`היי מאיר, אני ${name} ואני מאשר את הצעת המחיר לסרטון התדמית (2,500 ₪ + מע״מ). אשלם ב${pay}. שלח לי בבקשה את פרטי התשלום.`;
+  document.getElementById('waLink').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+  try{
+    if(!f.website.value){
+      const fd=new FormData(); fd.append('access_key',WEB3FORMS_KEY);
+      fd.append('subject','✅ אישור הצעת מחיר — סרטון תדמית למתחם — '+name);
+      fd.append('from_name','AI Lab · הצעת מחיר סרטון');
+      fd.append('Name',name); fd.append('Payment',pay); fd.append('Approved','כן');
+      fd.append('Page',location.href); fd.append('Time',new Date().toLocaleString('he-IL'));
+      const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:fd}); const j=await r.json(); if(!j.success) throw new Error(j.message);
+    }
+  }catch(x){ /* גם אם המייל נכשל, הוואטסאפ והשאלון ממשיכים */ }
+  f.style.display='none'; document.getElementById('done').classList.add('show');
+  document.getElementById('done').scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
