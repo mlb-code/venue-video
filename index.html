@@ -34,6 +34,15 @@ h2{font-size:21px;font-weight:800;letter-spacing:-.01em;margin:40px 0 14px}
 .price .tag{display:inline-block;font-size:11px;letter-spacing:.14em;font-weight:700;color:#0b0d12;background:var(--gold);padding:5px 12px;border-radius:20px;margin-bottom:12px}
 .price .amt{font-size:54px;font-weight:800;letter-spacing:-.03em;line-height:1}
 .price .amt small{font-size:20px;color:var(--muted);font-weight:500}
+.price .was{font-size:20px;color:var(--dim);text-decoration:line-through;margin-bottom:6px}
+.addon .ap s{display:block;font-size:13px;color:var(--dim);font-weight:500;text-align:center}
+.rev{border:1.5px solid var(--gold2);background:rgba(214,184,128,.06)}
+.rev h3{font-size:17px;font-weight:800;color:var(--gold);margin-bottom:10px}
+.rev .big{font-size:26px;font-weight:800;margin:4px 0 2px}
+.rev .big small{font-size:14px;color:var(--muted);font-weight:500}
+.rev p{color:var(--muted);font-size:14px;line-height:1.7}
+.rev p+p{margin-top:8px}
+.rev b{color:var(--text)}
 .price .note{color:var(--muted);font-size:14.5px;margin-top:10px}
 .price .note b{color:var(--text);font-weight:600}
 .addon{display:flex;align-items:center;gap:14px;background:var(--card);border:1px dashed rgba(214,184,128,.45);border-radius:14px;padding:16px 18px;margin-top:12px;cursor:pointer;position:relative;transition:border-color .15s,background .15s}
@@ -103,21 +112,22 @@ input:focus{outline:none;border-color:var(--gold)}
     <li><span class="c">✓</span><div>שיחה בין אנשים בעברית, מוזיקה מקורית וקול</div></li>
     <li><span class="c">✓</span><div>גרסה לרוחב וגרסה לאורך<small>לאתר, ליוטיוב, לאינסטגרם, לטיקטוק ולמסכים במתחם</small></div></li>
     <li><span class="c">✓</span><div>קאטים של 15 ו-30 שניות למודעות</div></li>
-    <li><span class="c">✓</span><div>שני סבבי תיקונים</div></li>
+    <li><span class="c">✓</span><div>שני סבבי תיקונים<small>פירוט במסגרת התיקונים למטה</small></div></li>
   </ul>
 </div>
 
 <h2>המחיר</h2>
 <div class="price">
   <div class="tag">מחיר השקה ללקוח ראשון</div>
-  <div class="amt">2,500 <small>₪ + מע״מ</small></div>
-  <div class="note">הכול כלול, בלי תוספות בדרך<br><b>חצי עם האישור, חצי במסירה</b> (1,462.50 ₪ כל תשלום)</div>
+  <div class="was">2,500 ₪</div>
+  <div class="amt">2,400 <small>₪ + מע״מ</small></div>
+  <div class="note">הכול כלול, בלי תוספות בדרך<br><b>חצי עם האישור, חצי במסירה</b> (1,416 ₪ כל תשלום, כולל מע״מ)</div>
 </div>
 <label class="addon" for="lp">
   <input type="checkbox" id="lp">
   <span class="box"></span>
   <div class="tx"><b>תוספת: דף נחיתה</b><small>דף אינטרנט אחד בעיצוב הסרטון, עם הסרטון, פרטי המתחם וכפתור וואטסאפ. מתאים למודעות ולקישור בביו. <u>לחץ כדי להוסיף</u></small></div>
-  <div class="ap">+500 <small>₪ + מע״מ</small></div>
+  <div class="ap"><s>500 ₪</s>+400 <small>₪ + מע״מ</small></div>
 </label>
 <div class="addon plain">
   <div class="tx"><b>אתר טכנולוגי מושקע</b><small>אתר מלא עם מספר דפים, טפסים ומערכת ניהול. תמחור נפרד לפי אפיון.</small></div>
@@ -129,7 +139,26 @@ input:focus{outline:none;border-color:var(--gold)}
   <p><b style="color:var(--text)">1.</b> מאשר כאן למטה וממלא שאלון קצר (10 דקות).</p>
   <p><b style="color:var(--text)">2.</b> מקבל 3 תסריטים ובוחר אחד. אחר כך מאשר את התמונות של הסצנות.</p>
   <p><b style="color:var(--text)">3.</b> תוך כעשרה ימי עבודה הסרטון אצלך, בכל הגרסאות.</p>
-  <p style="margin-top:14px;font-size:13px;color:var(--dim)">סבב תיקונים שלישי: 300 ₪. שינוי תסריט אחרי אישור התמונות מתומחר בנפרד. ההצעה בתוקף 14 יום.</p>
+  <p style="margin-top:14px;font-size:13px;color:var(--dim)">ההצעה בתוקף 14 יום.</p>
+</div>
+
+<h2>מה נכנס במחיר</h2>
+<div class="card terms">
+  <p>כל סרטון כזה הוא הפקה, לא תבנית. המחיר כולל:</p>
+  <p>• תסריטאות ובימוי: 3 תסריטים, ותמונה לכל סצנה לאישור שלך.</p>
+  <p>• הפקת הסצנות בכלי AI מתקדמים בתשלום. כל צילום מופק כמה פעמים, ורק הטוב ביותר נכנס לסרטון.</p>
+  <p>• קולות בעברית תקנית, התאמת תנועות השפתיים לדיבור, ומוזיקה מקורית.</p>
+  <p>• עריכה, כתוביות, וגרסאות לרוחב, לאורך ולמודעות.</p>
+</div>
+
+<h2>תיקונים</h2>
+<div class="card rev">
+  <h3>2 סבבי תיקונים כלולים במחיר</h3>
+  <p><b>סבב תיקונים</b> = רשימה אחת של הערות על הסרטון, שנשלחת בבת אחת. למשל: להחליף צילום, לשנות משפט, להחליף מוזיקה או לתקן כתובית.</p>
+  <p>תיקון קטן כמו טעות בכתובית לא נספר כסבב.</p>
+  <div class="big">סבב נוסף: 300 <small>₪ + מע״מ</small></div>
+  <p>כל סבב מחייב להפיק מחדש צילומים בכלים בתשלום, ועוד עבודת עריכה.</p>
+  <p><b>שינוי תסריט או קונספט אחרי שאושרו</b> הוא כבר הפקה מחדש, ויתומחר בנפרד לפי ההיקף.</p>
 </div>
 
 <h2 id="approve">אישור ההצעה</h2>
@@ -142,7 +171,7 @@ input:focus{outline:none;border-color:var(--gold)}
       <label class="opt"><input type="radio" name="pay" value="ביט"><span>📱 ביט</span></label>
       <label class="opt"><input type="radio" name="pay" value="העברה בנקאית"><span>🏦 העברה</span></label>
     </div>
-    <div class="sum" id="sum">סה״כ לאישור: <b>2,500 ₪ + מע״מ</b></div>
+    <div class="sum" id="sum">סה״כ לאישור: <b>2,400 ₪ + מע״מ</b></div>
     <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
     <div class="err" id="err"></div>
     <button class="btn btn-gold" id="send" type="submit">מאשר את ההצעה ←</button>
@@ -165,7 +194,7 @@ input:focus{outline:none;border-color:var(--gold)}
 const WEB3FORMS_KEY='9ba5abaf-d501-44db-a33d-d5028c89e0ef', WA='972546500795';
 const f=document.getElementById('f'),err=document.getElementById('err');
 const lpBox=document.getElementById('lp'),sum=document.getElementById('sum');
-lpBox.addEventListener('change',()=>{sum.innerHTML=lpBox.checked?'סה״כ לאישור: <b>3,000 ₪ + מע״מ</b> (סרטון 2,500 + דף נחיתה 500)':'סה״כ לאישור: <b>2,500 ₪ + מע״מ</b>'});
+lpBox.addEventListener('change',()=>{sum.innerHTML=lpBox.checked?'סה״כ לאישור: <b>2,800 ₪ + מע״מ</b> (סרטון 2,400 + דף נחיתה 400)':'סה״כ לאישור: <b>2,400 ₪ + מע״מ</b>'});
 f.addEventListener('submit',async e=>{
   e.preventDefault(); err.classList.remove('show');
   const name=document.getElementById('name').value.trim();
@@ -174,14 +203,14 @@ f.addEventListener('submit',async e=>{
   if(!pay){err.textContent='בחר איך נוח לך לשלם: ביט או העברה.';err.classList.add('show');return}
   const lp=document.getElementById('lp').checked;
   const btn=document.getElementById('send'); btn.disabled=true; btn.textContent='שולח…';
-  const msg=`היי מאיר, אני ${name} ואני מאשר את הצעת המחיר לסרטון (2,500 ₪ + מע״מ)${lp?' + דף נחיתה (500 ₪ + מע״מ)':''}. אשלם ב${pay}. שלח לי בבקשה את פרטי התשלום.`;
+  const msg=`היי מאיר, אני ${name} ואני מאשר את הצעת המחיר לסרטון (2,400 ₪ + מע״מ)${lp?' + דף נחיתה (400 ₪ + מע״מ)':''}. אשלם ב${pay}. שלח לי בבקשה את פרטי התשלום.`;
   document.getElementById('waLink').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
   try{
     if(!f.website.value){
       const fd=new FormData(); fd.append('access_key',WEB3FORMS_KEY);
       fd.append('subject','✅ אישור הצעת מחיר — סרטון למתחם — '+name);
       fd.append('from_name','AI Lab · הצעת מחיר סרטון');
-      fd.append('Name',name); fd.append('Payment',pay); fd.append('Approved','כן'); fd.append('LandingPage',lp?'כן (+500)':'לא');
+      fd.append('Name',name); fd.append('Payment',pay); fd.append('Approved','כן'); fd.append('LandingPage',lp?'כן (+400)':'לא');
       fd.append('Page',location.href); fd.append('Time',new Date().toLocaleString('he-IL'));
       const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:fd}); const j=await r.json(); if(!j.success) throw new Error(j.message);
     }
