@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>תסריטים · FORUM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d12;--card:#161a23;--line:rgba(255,255,255,.09);--text:#f2f1ec;--muted:#a8aab2;--dim:#6f727b;--gold:#d6b880;--gold2:rgba(214,184,128,.55)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Heebo",-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 60px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.top b{color:var(--text)}
+.hero{padding:40px 0 6px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.26em;color:var(--gold);font-weight:700;margin-bottom:12px}
+h1{font-size:32px;font-weight:800;line-height:1.15;letter-spacing:-.02em;margin-bottom:12px}
+h1 span{color:var(--gold)}
+.lead{color:var(--muted);font-size:16px;font-weight:300;max-width:520px;margin:0 auto}
+h2{font-size:21px;font-weight:800;margin:40px 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:14.5px}
+.facts div small{display:block;color:var(--dim);font-size:12px;font-weight:500}
+.nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.nav a{border:1.5px solid var(--line);border-radius:999px;padding:8px 16px;color:var(--text);text-decoration:none;font-size:14px;font-weight:600}
+.nav a.rec{border-color:var(--gold);color:var(--gold)}
+.script{margin-top:44px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.script.rec{border:1.5px solid var(--gold2)}
+.sh{padding:24px 20px 18px;background:linear-gradient(160deg,#1a1d27,#10131a)}
+.num{font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.tag{display:inline-block;font-size:11px;letter-spacing:.1em;font-weight:700;color:#0b0d12;background:var(--gold);padding:3px 10px;border-radius:20px;margin-right:8px;vertical-align:middle}
+.sh h3{font-size:25px;font-weight:800;margin:6px 0 8px;line-height:1.2}
+.sh p{color:var(--muted);font-size:15px;font-weight:300}
+.scene{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 20px;border-top:1px solid var(--line)}
+.thumb{width:150px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#0e1118;position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.miss{border:1.5px dashed rgba(214,184,128,.45);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11.5px;color:var(--gold);padding:6px;line-height:1.3}
+.thumb.gen{border:1.5px dashed rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11.5px;color:var(--dim);padding:6px;line-height:1.3}
+.t{direction:ltr;unicode-bidi:isolate;text-align:right;font-size:12px;color:var(--gold);font-weight:700;letter-spacing:.06em}
+.see{font-size:15px;margin:2px 0 6px}
+.say{font-size:14.5px;color:var(--text);background:rgba(214,184,128,.07);border-right:2px solid var(--gold2);padding:6px 10px;border-radius:4px}
+.say.none{background:none;border:0;padding:0;color:var(--dim);font-size:13.5px}
+.end{padding:18px 20px;border-top:1px solid var(--line);text-align:center;font-weight:800;letter-spacing:.04em}
+.end small{display:block;font-weight:400;color:var(--muted);letter-spacing:0;font-size:14px;margin-top:4px}
+.list{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px}
+.list li{display:flex;gap:10px}
+.list li .c{flex-shrink:0;color:var(--gold);font-weight:800}
+.list small{display:block;color:var(--muted);font-size:13.5px;font-weight:300}
+.why{color:var(--muted);font-size:15px}
+.why b{color:var(--text)}
+.foot{text-align:center;padding-top:40px;color:var(--dim);font-size:13px}
+@media (max-width:560px){h1{font-size:27px}.scene{grid-template-columns:1fr;gap:10px}.thumb{width:100%}.thumb.miss,.thumb.gen{aspect-ratio:auto;height:52px}.facts{grid-template-columns:1fr}}
+.loc{display:inline-block;font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:0 8px;margin-right:6px;letter-spacing:0;direction:rtl}
+.snd{font-size:12.5px;color:var(--dim);margin-top:5px}
+.meta{padding:0 20px 16px;color:var(--muted);font-size:14px;line-height:1.7}
+.meta b{color:var(--text)}
+.note{padding:12px 20px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+table.rank{width:100%;border-collapse:collapse;font-size:14.5px}
+table.rank td{padding:10px 8px;border-top:1px solid var(--line);vertical-align:top;color:var(--muted)}
+table.rank td:first-child{color:var(--gold);font-weight:800;width:30px}
+table.rank td b{color:var(--text)}
+.tag2{font-size:16px;font-weight:800;margin-top:12px}
+.tag2 small{display:block;font-weight:300;color:var(--muted);font-size:14px}
+.script{display:block}
+summary{list-style:none;cursor:pointer;padding:24px 20px 18px;background:linear-gradient(160deg,#1a1d27,#10131a)}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:25px;font-weight:800;margin:6px 0 8px;line-height:1.2}
+summary p{color:var(--muted);font-size:15px;font-weight:300}
+.more{display:inline-block;margin-top:10px;font-size:13px;color:var(--gold);font-weight:600}
+details[open] .more{display:none}
+.t{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.t span:first-child{direction:ltr;unicode-bidi:isolate}
+.loc{margin:0}
+.pick{display:grid;grid-template-columns:1fr;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.opt span{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;font-weight:600;font-size:15.5px;background:#0e1118}
+.opt input:checked+span{border-color:var(--gold);background:rgba(214,184,128,.1);color:var(--gold)}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rooms .opt span{flex-direction:column;padding:6px;font-size:12.5px;text-align:center}
+.rooms img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block}
+label.f{display:block;font-size:15px;font-weight:600;margin:18px 0 8px}
+label.f small{display:block;color:var(--dim);font-weight:300;font-size:13px}
+input[type=text],textarea{width:100%;background:#0e1118;border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--text);font:inherit;font-size:16px}
+textarea{min-height:90px}
+.yn{display:flex;gap:8px}.yn .opt{flex:1}.yn .opt span{justify-content:center}
+.btn{display:block;width:100%;padding:16px;border:0;border-radius:12px;background:var(--gold);color:#0b0d12;font:inherit;font-size:17px;font-weight:700;cursor:pointer;margin-top:20px}
+.btn:disabled{opacity:.6}
+.err{display:none;color:#ffb3b3;font-size:14px;margin-top:10px}
+.done{display:none;text-align:center;padding:24px 0}.done.show{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><b>מאיר לביא · AI Lab</b><span>FORUM BUSINESS CLUB</span></div>
+<div class="hero">
+  <div class="eyebrow">FORUM BUSINESS CLUB</div>
+  <h1>חמישה תסריטים.<br><span>בוחרים אחד, ויוצאים להפקה.</span></h1>
+  <p class="lead">כתבנו חמישה סרטים שונים באמת, כל אחד כ-90 שניות, לקהל שמזמין כנסים ואירועים. כולם בנויים על המסלול האמיתי בקומה, לפי המפה שסימנת.</p>
+</div>
+
+<h2>על מה זה בנוי</h2>
+<div class="card facts">
+  <div><small>המסר</small>מתחם שאין כמוהו בארץ: עבודה, כנסים, אירועים וברים במקום אחד</div>
+  <div><small>המשפט שלך</small>"סטנדרט בינלאומי לפתח תקווה"</div>
+  <div><small>הרגעים הגדולים</small>המחיצה שנפתחת לאולם, והמרפסת מתחת למגדלים</div>
+  <div><small>הרגשה</small>יוקרתי ושקט · שיחה קצרה, בלי קריינות, בלי מחירים</div>
+  <div><small>הקהל</small>מנכ"לים, הנהלות, מנהלי שיווק ומשאבי אנוש, מפיקי אירועים</div>
+  <div><small>בסוף</small>FORUM · PEOPLE | IDEAS | OPPORTUNITIES · ב.ס.ר סיטי · האתר</div>
+</div>
+
+<h2>חמשת התסריטים</h2>
+<p style="color:var(--muted);font-size:14px;margin:-6px 0 4px">לחץ על תסריט כדי לפתוח אותו, סצנה אחרי סצנה.</p>
+<details class="script" id="s1">
+<summary><div class="num">תסריט 1</div><h3>פה אחד</h3><p>הנהלה מגיעה לסעיף האחרון בסדר היום, הכנס השנתי, ומגלה שהתשובה נמצאת מעבר לקיר הזכוכית של החדר שבו היא יושבת.</p><span class="more">לפתוח את התסריט המלא ▾</span></summary>
+<div class="meta"><b>הפתיחה:</b> מעבר לכתף של היו&quot;ר, שולחן ארוך של פנים רציניות, ושלוש מילים: &quot;סעיף אחרון. הכנס.&quot;<br><b>דמויות:</b> היו&quot;ר (אישה, 50+), סמנכ&quot;ל כספים (גבר, 50+, הספקן), סמנכ&quot;לית שיווק (אישה, 35+), שותף ותיק (גבר, 60+, מדבר מעט). עוד שלושה-ארבעה חברי הנהלה ששותקים.<br><b>אורך:</b> 1:29 </div>
+<div class="scene"><div class="thumb"><img src="img/meet.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:00–0:05</span><span class="loc">חדר הישיבות</span></div><div class="see">מעבר לכתף של היו&quot;ר, מראש השולחן: שבעה אנשים, אור בוקר, ניירות. דחיפה איטית פנימה.</div><div class="say">יו&quot;ר: &quot;סעיף אחרון. הכנס השנתי.&quot; · כתובית קטנה: ישיבת הנהלה · 09:12</div><div class="snd">♪ שקט. דף מתהפך, עט. בלי מוזיקה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/meet.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:05–0:10</span><span class="loc">חדר הישיבות</span></div><div class="see">פרופיל של סמנכ&quot;ל הכספים בקצה השולחן, מרכיב משקפיים, עיניים בניירות. סטטי, פוקוס רדוד.</div><div class="say">סמנכ&quot;ל כספים: &quot;תל אביב, כמו כל שנה?&quot;</div><div class="snd">♪ צליל פסנתר בודד</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/meet.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:10–0:16</span><span class="loc">חדר הישיבות</span></div><div class="see">סמנכ&quot;לית השיווק קמה. המצלמה הולכת אחריה מהגב אל קיר הזכוכית של החדר.</div><div class="say">סמנכ&quot;לית שיווק: &quot;ואם השנה לא?&quot;</div><div class="snd">♪ המוזיקה נכנסת, נמוכה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/work.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:16–0:22</span><span class="loc">הקבלה, הלאונג&#x27; ועמדות העבודה</span></div><div class="see">מבט מבעד לזכוכית של חדר הישיבות: דלפק הקבלה הירוק, הלאונג&#x27;, ובקצה שולחן העץ הארוך ואנשים עובדים. דולי איטי קדימה.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ מוזיקה, המולת עבודה רחוקה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/meet.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:22–0:27</span><span class="loc">חדר הישיבות</span></div><div class="see">רחב מפינת החדר. סמנכ&quot;ל הכספים שואל בלי להרים ראש. השותף הוותיק עונה בלי להרים עיניים מהכוס. מישהי מחייכת.</div><div class="say">סמנכ&quot;ל כספים: &quot;והחניה?&quot; · שותף ותיק: &quot;מתחת לבניין.&quot;</div><div class="snd">♪ שקט קצר, ואז המוזיקה ממשיכה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/work.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:27–0:33</span><span class="loc">לאונג&#x27; → הבר → המעבר</span></div><div class="see">היו&quot;ר קמה ופותחת את הדלת; הקבוצה יוצאת אחריה. צילום מהגב: דרך הלאונג&#x27;, ליד הבר, אל המעבר לאורך המשרדים.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ צעדים על שיש, המוזיקה מתרחבת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:33–0:41</span><span class="loc">האולם הגדול (המחיצה)</span></div><div class="see">הדלתות הכפולות נפתחות אל חדר הישיבות הגדול. המחיצה המתקפלת מתחילה לנוע ונפתחת עד הסוף: במה, מסך, שורות כיסאות, ריק ומואר. המצלמה נמוכה ועולה לאט.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ רחש המחיצה, ואז פעימה אחת במוזיקה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:41–0:48</span><span class="loc">אולם הכנסים (יום הכנס)</span></div><div class="see">חיתוך תואם לאותה זווית: האולם מלא, דוברת על הבמה מרחוק, לוגו FORUM על המסך. מבט מאחורי הקהל.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ מחיאות כפיים נבלעות במוזיקה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/event.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:48–0:55</span><span class="loc">האולם בערב (מצב אירוע)</span></div><div class="see">אותו חלל בערב: אור חם, ספות קטיפה ירוקה, פסנתר כנף, בר, אורחים. גלישה איטית משמאל לימין.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ פסנתר חי משתלב במוזיקה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:55–1:02</span><span class="loc">דלתות האולם → המרפסת</span></div><div class="see">האורחים יוצאים מדלתות האולם אל דק העץ. המצלמה יוצאת איתם וטילט למעלה: הפרגולה, ואז המגדלים המוארים מעל.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ רוח קלה, כוסות, המוזיקה פתוחה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:02–1:08</span><span class="loc">הבר החיצוני (U)</span></div><div class="see">חברי ההנהלה עם כוסות ליד הבר החיצוני, מהגב ומהצד, מביטים למעלה. היו&quot;ר מסתובבת חצי סיבוב (השוט המדיום היחיד, בפרופיל).</div><div class="say">יו&quot;ר: &quot;אז… פה?&quot;</div><div class="snd">♪ המוזיקה יורדת כמעט לשקט</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:08–1:13</span><span class="loc">הבר החיצוני (U)</span></div><div class="see">פרופיל של סמנכ&quot;ל הכספים, מרים מעט את הכוס.</div><div class="say">סמנכ&quot;ל כספים: &quot;פה אחד.&quot;</div><div class="snd">♪ חיוך בשקט, צליל כוס</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:13–1:21</span><span class="loc">המרפסת, רחב</span></div><div class="see">הקבוצה קטנה בפריים; הדק, האדניות, והמגדלים המוארים ממלאים את החלק העליון. המצלמה נסוגה ועולה מעט מעל הדק.</div><div class="say">טקסט: <b>עבודה. כנסים. אירועים. פה אחד.</b></div><div class="snd">♪ אקורד סיום</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/logo.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:21–1:29</span><span class="loc">כרטיס סיום</span></div><div class="see">השלט המואר על קיר העץ, ואז הבלוק האחיד.</div><div class="say">בלוק סיום</div><div class="snd">♪ צליל לוגו קצר, שקט</div></div></div>
+<div class="end">FORUM BUSINESS CLUB<small>&quot;פה אחד.&quot; → <b>עבודה. כנסים. אירועים. פה אחד.</b> → הבלוק האחיד.</small></div>
+</details>
+<details class="script" id="s2">
+<summary><div class="num">תסריט 2</div><h3><span dir="ltr">18:00–00:00</span></h3><p>ערב אחד במתחם, מהרגע שהכנס נגמר ועד שהאור האחרון כבה, כמעט בלי מילים: אותו חלל הופך מאולם לאירוע, מהאירוע למרפסת, ואף אחד לא נוסע לשום מקום.</p><span class="more">לפתוח את התסריט המלא ▾</span></summary>
+<div class="meta"><b>הפתיחה:</b> הסרט נפתח בסיום: &quot;18:00&quot; על המסך, מחיאות כפיים, והמסך הגדול על הבמה נכבה. הצופה מבין מיד שזה לא סרט על הכנס, אלא על מה שקורה אחריו.<br><b>דמויות:</b> הדוברת (אישה, 45+), המפיק מטעם החברה (גבר, 40+), המנכ&quot;ל (גבר, 55+). צוות המתחם ברקע, אורחים.<br><b>אורך:</b> 1:29 </div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:00–0:06</span><span class="loc">אולם הכנסים</span></div><div class="see">מאחורי הקהל: הדוברת על הבמה מרחוק מרכינה ראש, המסך עם לוגו FORUM מתעמעם לשחור. סטטי, דחיפה קלה.</div><div class="say">שעה על המסך: 18:00</div><div class="snd">♪ מחיאות כפיים נמוגות לרחש חדר</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:06–0:12</span><span class="loc">דלתות האולם</span></div><div class="see">הדוברת יוצאת מהדלתות מהגב, מסירה את המיקרופון מהדש. המפיק מחכה ליד המשקוף, בצד.</div><div class="say">שעה: 18:05 · דוברת: &quot;לאן עכשיו?&quot; · מפיק: &quot;לשום מקום.&quot;</div><div class="snd">♪ שקט, צעדים</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:12–0:20</span><span class="loc">האולם הגדול</span></div><div class="see">היפוך החלל: שורות כיסאות מתגלגלות החוצה מימין, ספות קטיפה ירוקה נכנסות משמאל, הכיסוי יורד מהפסנתר. גלישה צידית אחת ואיטית (צוות מרחוק, פעולה פשוטה).</div><div class="say">שעה: 18:20</div><div class="snd">♪ פעימה קצובה במוזיקה, כמו מטרונום</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/bar.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:20–0:26</span><span class="loc">הבר הפנימי</span></div><div class="see">מדף הבקבוקים המואר, ברמן מצחצח כוס, כיסאות ירוקים ריקים, אור ערב בחלונות. דולי לאורך הבר.</div><div class="say">שעה: 18:40</div><div class="snd">♪ קרח בכוס, זכוכית</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:26–0:32</span><span class="loc">הכניסה (מעליות, קבלה)</span></div><div class="see">דלתות המעלית נפתחות מול הדלפק הירוק המעוגל; אורחים ראשונים נכנסים מהגב; מארחת מקבלת אותם, וחדר הפודקאסט המזוגג לצידה.</div><div class="say">שעה: 19:00</div><div class="snd">♪ צלצול מעלית, המוזיקה מתרחבת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:32–0:39</span><span class="loc">לאונג&#x27; + חדר הפודקאסט</span></div><div class="see">אורחים בקבוצות קטנות בכורסאות הבוקלה, נברשות הפליז; זוג עומד ליד הזכוכית המעוגלת, ובפנים הדוברת מוקלטת לפודקאסט (בלי סאונד). פאן איטי.</div><div class="say">שעה: 19:30</div><div class="snd">♪ המולה רכה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/event.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:39–0:47</span><span class="loc">האולם בערב (מצב אירוע)</span></div><div class="see">החלל במצב אירוע: אור חם, פסנתרן מנגן, בר, אנשים. המצלמה יורדת מגופי התאורה אל הקהל.</div><div class="say">שעה: 20:30</div><div class="snd">♪ הפסנתר החי מוביל, המוזיקה מתחתיו</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/event.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:47–0:53</span><span class="loc">האולם בערב (בשוליים)</span></div><div class="see">מעבר לכתף של המנכ&quot;ל והמפיק בקצה החדר, מביטים באורחים.</div><div class="say">שעה: 21:15 · מנכ&quot;ל: &quot;כולם נשארו.&quot; · מפיק: &quot;כולם.&quot;</div><div class="snd">♪ שקט מתחת לפסנתר</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:53–1:01</span><span class="loc">דלתות האולם → המרפסת</span></div><div class="see">הדלתות נפתחות מבפנים והמצלמה יוצאת ללילה: דק עץ, אדניות, אורות הפרגולה, הבר החיצוני, וטילט למעלה אל המגדלים המוארים.</div><div class="say">שעה: 22:00</div><div class="snd">♪ אוויר לילה, המוזיקה נפתחת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:01–1:07</span><span class="loc">הבר החיצוני (U)</span></div><div class="see">ידיים וכוסות על השיש, אורות המגדלים משתקפים בו. אנשים מהגב. קלוז איטי.</div><div class="say">שעה: 22:40</div><div class="snd">♪ צחוק רחוק, כוסות</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:07–1:14</span><span class="loc">מעקה המרפסת</span></div><div class="see">שתי דמויות מהגב ליד המעקה: הרחוב שקט מתחת, המגדלים מעל.</div><div class="say">שעה: 23:50 · דוברת: &quot;לאן עכשיו?&quot; · מפיק: &quot;עכשיו הביתה.&quot;</div><div class="snd">♪ המוזיקה יורדת לפסנתר בודד</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:14–1:21</span><span class="loc">לאונג&#x27; → מעליות</span></div><div class="see">הלאונג&#x27; ריק, האורות כבים אחד-אחד; השלט על קיר העץ נשאר דולק. המצלמה נסוגה אל המעלית.</div><div class="say">שעה: 00:00</div><div class="snd">♪ הפסנתר נעצר על תו אחד</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/logo.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:21–1:29</span><span class="loc">כרטיס סיום</span></div><div class="see">טקסט, ואז הבלוק האחיד.</div><div class="say"><b>הכנס. האירוע. הלילה. בלי לצאת מהמתחם.</b> + בלוק סיום</div><div class="snd">♪ שקט, צליל לוגו</div></div></div>
+<div class="end">FORUM BUSINESS CLUB<small>&quot;עכשיו הביתה.&quot; → <b>הכנס. האירוע. הלילה. בלי לצאת מהמתחם.</b> → הבלוק האחיד.</small></div>
+</details>
+<details class="script" id="s3">
+<summary><div class="num">תסריט 3</div><h3>שתי דקות לבמה</h3><p>דוברת ראשית יוצאת מהמעלית שתי דקות לפני ההרצאה, והמצלמה הולכת אחריה בלי לעזוב, דרך כל הקומה, עד המילה הראשונה על הבמה.</p><span class="more">לפתוח את התסריט המלא ▾</span></summary>
+<div class="meta"><b>הפתיחה:</b> אנחנו בתוך המעלית, מאחורי הגב שלה. הדלתות נפתחות על השלט המואר, ובאוזנייה: &quot;שתי דקות.&quot; ספירה לאחור מופיעה על המסך.<br><b>דמויות:</b> הדס, הדוברת (אישה, 45+), קול המפיק באוזנייה (גבר), מכר ותיק בבר (גבר, 50+), מארחת, קהל.<br><b>אורך:</b> 1:24 </div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:00–0:05</span><span class="loc">מעלית → הקבלה</span></div><div class="see">מתוך המעלית, מאחורי גבה. הדלתות נפתחות מול דלפק הקבלה הירוק. המצלמה יוצאת אחריה.</div><div class="say">אוזנייה: &quot;שתי דקות, הדס.&quot; · ספירה: 2:00</div><div class="snd">♪ צלצול מעלית, עקבים על שיש. בלי מוזיקה עדיין</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:05–0:11</span><span class="loc">חדר הפודקאסט המזוגג</span></div><div class="see">היא חולפת על פני הזכוכית המעוגלת; בפנים שני אנשים באוזניות ונורה אדומה קטנה. מעקב מהגב, נמוך.</div><div class="say">ספירה: 1:50</div><div class="snd">♪ פעימה שקטה נכנסת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/work.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:11–0:17</span><span class="loc">לאונג&#x27; + עמדות העבודה</span></div><div class="see">המארחת מהנהנת אליה; כורסאות בוקלה, נברשות פליז, ברקע שולחן העץ הארוך ואנשים עובדים; על הקיר הארוך השלט המואר. ממשיכים אחריה.</div><div class="say">ספירה: 1:40</div><div class="snd">♪ הפעימה ממשיכה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/bar.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:17–0:24</span><span class="loc">הבר</span></div><div class="see">מעקב צידי. מכר ותיק על כיסא בר מסתובב (בפרופיל) כשהיא עוברת. היא לא עוצרת.</div><div class="say">מכר: &quot;הדס. הולכת?&quot; · הדס (מהגב): &quot;לבמה. עוד דקה.&quot; · מכר: &quot;נתראה במרפסת.&quot; · ספירה: 1:30</div><div class="snd">♪ כוס מונחת, הפעימה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/work.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:24–0:30</span><span class="loc">המעבר לאורך המשרדים</span></div><div class="see">היא הולכת במעבר; בצד דלתות הזכוכית של עשרת המשרדים, אנשים עובדים. המצלמה מאחור.</div><div class="say">אוזנייה: &quot;דקה.&quot; · ספירה: 1:00</div><div class="snd">♪ הפעימה מתקצרת מעט</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:30–0:36</span><span class="loc">חדר הישיבות הגדול</span></div><div class="see">היא חולפת על פני חדר הישיבות הגדול (המחיצה עוד סגורה), ובו ישיבה אחרונה לפני הכנס. המצלמה אחריה.</div><div class="say">ספירה: 0:50</div><div class="snd">♪ מוזיקה נמוכה מתחת לפעימה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/work.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:36–0:42</span><span class="loc">המעבר לאולם</span></div><div class="see">שני אנשי צוות עם טאבלט חולפים לידה; כמה ראשים מסתובבים. בקצה, הדלתות הכפולות של האולם.</div><div class="say">ספירה: 0:40</div><div class="snd">♪ הפעימה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:42–0:49</span><span class="loc">דלתות האולם</span></div><div class="see">איש צוות פותח את הדלתות הכפולות: קיר של קול, כל האולם יושב, הבמה מוארת. המצלמה נכנסת אחריה.</div><div class="say">אוזנייה: &quot;שלושים.&quot; · ספירה: 0:30</div><div class="snd">♪ המולת קהל, המוזיקה עולה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:49–0:55</span><span class="loc">אולם הכנסים (מעבר צידי)</span></div><div class="see">היא הולכת במעבר הצידי; קהל בקדמת הפריים, ראשים מסתובבים.</div><div class="say">ספירה: 0:15</div><div class="snd">♪ ההמולה נרגעת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:55–1:01</span><span class="loc">מדרגות הבמה</span></div><div class="see">היא נעצרת, נשימה אחת. יד מיישרת את הז&#x27;קט. (השוט המדיום היחיד: פרופיל, בלי דיבור.)</div><div class="say">אוזנייה: &quot;עשר.&quot; · ספירה: 0:10</div><div class="snd">♪ שקט כמעט מוחלט</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:01–1:09</span><span class="loc">הבמה (נקודת המבט שלה)</span></div><div class="see">המצלמה עוברת אותה ועולה לבמה: כל האולם, האורות, זוהר המסך, ובדלתות האחוריות המרפסת בדמדומים והמגדלים.</div><div class="say">ספירה: 0:00 ונעלמת · הדס: &quot;ערב טוב.&quot;</div><div class="snd">♪ חיתוך לשחור על המילה. שקט</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:09–1:16</span><span class="loc">המרפסת, לילה</span></div><div class="see">אנשים זורמים מהאולם אל הדק ואל הבר החיצוני; המגדלים מוארים מעל. עלייה איטית.</div><div class="say">טקסט: <b>נתראה במרפסת.</b></div><div class="snd">♪ המוזיקה חוזרת, רכה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/logo.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:16–1:24</span><span class="loc">כרטיס סיום</span></div><div class="see">הבלוק האחיד.</div><div class="say">בלוק סיום</div><div class="snd">♪ צליל לוגו</div></div></div>
+<div class="end">FORUM BUSINESS CLUB<small>&quot;ערב טוב.&quot; → <b>נתראה במרפסת.</b> → הבלוק האחיד.</small></div>
+</details>
+<details class="script rec" id="s4" open>
+<summary><div class="num">תסריט 4 <span class="tag">ההמלצה שלנו</span></div><h3>ההזמנה</h3><p>הזמנה לכנס שנתי יוצאת למסע, משולחן של מנכ&quot;ל ספקן בתל אביב ועד לשיש של הבר החיצוני בפתח תקווה, והמילים &quot;פתח תקווה&quot; נאמרות פעמיים, בשני טונים.</p><span class="more">לפתוח את התסריט המלא ▾</span></summary>
+<div class="meta"><b>הפתיחה:</b> מעטפה עבה בצבע שמנת נוחתת על שולחן כהה, יד פותחת, ו&quot;פתח תקווה?&quot; נשאל מחוץ לפריים.<br><b>דמויות:</b> המנכ&quot;ל האורח (גבר, 55+), עוזרת (קול בלבד), מארחת ליד הדלפק, קולגה (אישה, 45+). דוברת, קהל, אורחים.<br><b>אורך:</b> 1:25 </div>
+<div class="scene"><div class="thumb gen">ייווצר בהפקה<br>שולחן עבודה (מחוץ למתחם)</div><div><div class="t"><span>0:00–0:04</span><span class="loc">שולחן עבודה (מחוץ למתחם)</span></div><div class="see">מלמעלה: מעטפה שמנת עבה נוחתת על שולחן כהה; הטבעה FORUM BUSINESS CLUB. יד פותחת.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ נייר בלבד. בלי מוזיקה</div></div></div>
+<div class="scene"><div class="thumb gen">ייווצר בהפקה<br>הכרטיס (אינסרט)</div><div><div class="t"><span>0:04–0:10</span><span class="loc">הכרטיס (אינסרט)</span></div><div class="see">הכרטיס נשלף ומונח. קלוז, סטטי.</div><div class="say">טקסט על הכרטיס: הכנס השנתי · FORUM BUSINESS CLUB · ב.ס.ר סיטי, פתח תקווה · חניה בבניין · מנכ&quot;ל (מחוץ לפריים): &quot;פתח תקווה?&quot; · עוזרת (מחוץ לפריים): &quot;פתח תקווה.&quot;</div><div class="snd">♪ שקט</div></div></div>
+<div class="scene"><div class="thumb gen">ייווצר בהפקה<br>משרד (מחוץ למתחם)</div><div><div class="t"><span>0:10–0:15</span><span class="loc">משרד (מחוץ למתחם)</span></div><div class="see">בוקר. הכרטיס נכנס לכיס הפנימי של הז&#x27;קט; המנכ&quot;ל יוצא מהמשרד, מהגב.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ צ&#x27;לו בודד נכנס</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/exterior.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:15–0:22</span><span class="loc">תוך הרכב → ב.ס.ר סיטי מבחוץ</span></div><div class="see">מתוך הרכב: הכרטיס על מושב הנוסע; דרך השמשה הפודיום הכחול והמגדלים מעליו; מחסום החניון עולה. סטטי.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ איתות, מחסום</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:22–0:28</span><span class="loc">מעלית → הקבלה</span></div><div class="see">קלוז על הכרטיס ביד; הדלתות נפתחות; טילט מהכרטיס אל דלפק הקבלה הירוק והמארחת.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ צלצול מעלית, המוזיקה מתרחבת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:28–0:35</span><span class="loc">דלפק הקבלה הירוק + לאונג&#x27; + חדר הפודקאסט</span></div><div class="see">המארחת לוקחת את הכרטיס; הוא מסתובב (מהגב) ומביט: נברשות הפליז, כורסאות הבוקלה, הזכוכית המעוגלת ובתוכה הקלטה, והשלט המואר על הקיר הארוך. פאן איטי שעוקב אחרי המבט שלו.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ המולה רכה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/bar.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:35–0:41</span><span class="loc">הבר הפנימי (יום)</span></div><div class="see">מרחוק ומהצד: כוס אספרסו מוגשת לו; מדף הבקבוקים המואר; דרך הדלתות שליד הבר, המרפסת והמגדלים.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ ספל על שיש</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:41–0:49</span><span class="loc">אולם הכנסים</span></div><div class="see">הוא נכנס; המחיצה פתוחה, האולם מלא; הוא מתיישב בשורה האחרונה (מהגב). דוברת על הבמה, הלוגו על המסך. דחיפה איטית מהמעבר.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ קול הדוברת מעומעם, מחיאות כפיים</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/event.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:49–0:56</span><span class="loc">האולם בערב (מצב אירוע)</span></div><div class="see">אותו חלל בערב: פסנתר, אור חם, קטיפה ירוקה; הוא ליד שולחן בר עם שניים, מרחוק.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ פסנתר חי</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:56–1:04</span><span class="loc">דלתות האולם → המרפסת</span></div><div class="see">הוא יוצא אל הדק; הפרגולה, האדניות, הבר החיצוני; המצלמה אחריו וטילט למעלה אל המגדלים המוארים.</div><div class="say none">(בלי דיבור)</div><div class="snd">♪ אוויר לילה, המוזיקה פתוחה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:04–1:11</span><span class="loc">הבר החיצוני (U)</span></div><div class="see">הוא והקולגה מהגב, כוסות ביד, מביטים למעלה. היא מטה ראש אליו.</div><div class="say">קולגה: &quot;נו?&quot; · (שתיקה) · מנכ&quot;ל: &quot;פתח תקווה.&quot;</div><div class="snd">♪ המוזיקה יורדת לצ&#x27;לו בודד</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:11–1:17</span><span class="loc">הבר החיצוני (אינסרט)</span></div><div class="see">הכרטיס מונח על השיש ליד הכוס, אורות המגדלים משתקפים בשיש. דחיפה איטית.</div><div class="say">טקסט: <b>סטנדרט בינלאומי לפתח תקווה.</b></div><div class="snd">♪ צליל כוס, שקט</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/logo.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:17–1:25</span><span class="loc">כרטיס סיום</span></div><div class="see">הבלוק האחיד.</div><div class="say">בלוק סיום</div><div class="snd">♪ צליל לוגו</div></div></div>
+<div class="end">FORUM BUSINESS CLUB<small>&quot;פתח תקווה.&quot; (הפעם בלי סימן שאלה) → <b>סטנדרט בינלאומי לפתח תקווה.</b> → הבלוק האחיד.</small></div>
+</details>
+<details class="script" id="s5">
+<summary><div class="num">תסריט 5</div><h3>הרשימה</h3><p>מפיקת אירועים עוברת בטלפון עם הלקוח על רשימת הדרישות לכנס השנתי, ומסמנת סעיף אחרי סעיף בלי לצאת מהקומה, עד שנשאר רק דבר אחד למלא.</p><span class="more">לפתוח את התסריט המלא ▾</span></summary>
+<div class="meta"><b>הפתיחה:</b> קלוז על מחברת, עט מצייר סימון ✓ גדול ליד השורה הראשונה, עם הצליל. &quot;אחד יש. תמשיך.&quot; הצופה מבין את המשחק בשנייה: סעיף, חלל, סימון.<br><b>דמויות:</b> המפיקה (אישה, 45+), הלקוח (קול בטלפון, גבר, 50+). צוות המתחם ברקע.<br><b>אורך:</b> 1:26 </div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:00–0:05</span><span class="loc">דלפק הקבלה הירוק (אינסרט)</span></div><div class="see">מלמעלה: מחברת על שיש הדלפק, רשימה בכתב יד. העט מצייר ✓ ליד השורה הראשונה, &quot;ישיבת הנהלה&quot;.</div><div class="say">מפיקה: &quot;אחד יש. תמשיך.&quot; · כותרת על המסך: הכנס השנתי · דרישות</div><div class="snd">♪ צליל העט על הנייר. בלי מוזיקה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/meet.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:05–0:11</span><span class="loc">חדר הישיבות</span></div><div class="see">היא עומדת בפתח, מהגב; שולחן הישיבות והמסך. דחיפה איטית.</div><div class="say">סימון: ישיבת הנהלה ✓ · לקוח (טלפון): &quot;ראיונות עם הדוברים, לווידאו.&quot;</div><div class="snd">♪ פעימה אחת במוזיקה (כל סימון = פעימה)</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/tour.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:11–0:17</span><span class="loc">חדר הפודקאסט המזוגג</span></div><div class="see">היא מביטה מבעד לזכוכית המעוגלת (מהצד): מיקרופונים, אוזניות.</div><div class="say">סימון: אולפן ✓ · לקוח: &quot;משרד לצוות שלי, ליום.&quot;</div><div class="snd">♪ פעימה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/work.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:17–0:23</span><span class="loc">מסדרון המשרדים</span></div><div class="see">היא הולכת לאורך דלתות הזכוכית של המשרדים; המצלמה לפניה, נסוגה (היא לא מדברת).</div><div class="say">סימון: משרד לצוות ✓ · לקוח: &quot;ואולם. במה, מסך, כל החברה.&quot;</div><div class="snd">♪ פעימה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:23–0:30</span><span class="loc">האולם הגדול (חדר הישיבות הגדול)</span></div><div class="see">היא פותחת את הדלתות הכפולות: חדר ישיבות גדול. ניגשת למחיצה המתקפלת ומזיזה אותה; המחיצה מתחילה לנוע.</div><div class="say">מפיקה: &quot;רגע.&quot;</div><div class="snd">♪ רחש המחיצה. המוזיקה עוצרת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/conf.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:30–0:38</span><span class="loc">אולם הכנסים (המחיצה נפתחת)</span></div><div class="see">המחיצה נפתחת עד הסוף: במה, מסך, שורות כיסאות. המצלמה עולה לאט.</div><div class="say">לקוח: &quot;זה אותו חדר?&quot; · מפיקה: &quot;אותו חדר.&quot; · סימון: אולם כנסים ✓</div><div class="snd">♪ פעימה כפולה, המוזיקה חוזרת גדולה יותר</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/event.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:38–0:45</span><span class="loc">האולם בערב (מצב אירוע)</span></div><div class="see">חיתוך תואם: אותו חלל בלילה, פסנתר, קטיפה ירוקה, אור חם. גלישה איטית.</div><div class="say">לקוח: &quot;ובערב?&quot; · סימון: אירוע ערב ✓</div><div class="snd">♪ פסנתר חי נכנס</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/bar.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:45–0:51</span><span class="loc">הבר הפנימי</span></div><div class="see">מדף הבקבוקים המואר, כיסאות ירוקים; ברמן מניח כוס. דולי קצר.</div><div class="say">לקוח: &quot;בר.&quot; · סימון: בר ✓</div><div class="snd">♪ כוס על שיש, פעימה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:51–0:59</span><span class="loc">דלתות האולם → המרפסת</span></div><div class="see">היא פותחת את דלתות המרפסת: דק העץ, הפרגולה, האדניות, הבר החיצוני; טילט למעלה אל המגדלים.</div><div class="say">לקוח: &quot;יש מרפסת?&quot; · מפיקה: &quot;יש.&quot; · סימון: מרפסת ✓</div><div class="snd">♪ רוח, המוזיקה נפתחת</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/exterior.jpg" alt="" loading="lazy"></div><div><div class="t"><span>0:59–1:05</span><span class="loc">ב.ס.ר סיטי מבחוץ (דמדומים)</span></div><div class="see">הפודיום הכחול, המגדלים מעליו, מחסום החניון בבסיס עולה. סטטי.</div><div class="say">לקוח: &quot;ו… חניה?&quot; · מפיקה (מחוץ לפריים): &quot;למטה.&quot; · סימון: חניה ✓</div><div class="snd">♪ מחסום, פעימה</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:05–1:12</span><span class="loc">מעקה המרפסת (לילה)</span></div><div class="see">היא ליד המעקה מהגב, טלפון ביד, המגדלים מוארים מעל.</div><div class="say">לקוח: &quot;אז מה חסר?&quot; · (שתיקה) · מפיקה: &quot;רק תאריך.&quot;</div><div class="snd">♪ המוזיקה יורדת לפסנתר</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/terrace.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:12–1:18</span><span class="loc">הבר החיצוני (אינסרט)</span></div><div class="see">המחברת על שיש הבר החיצוני: כל השורות מסומנות, השורה האחרונה ריקה. דחיפה איטית.</div><div class="say">טקסט (כמו בכתב יד): תאריך: ______</div><div class="snd">♪ צליל עט, שקט</div></div></div>
+<div class="scene"><div class="thumb"><img src="img/logo.jpg" alt="" loading="lazy"></div><div><div class="t"><span>1:18–1:26</span><span class="loc">כרטיס סיום</span></div><div class="see">טקסט, ואז הבלוק האחיד.</div><div class="say"><b>הכול ברשימה. הכול בקומה אחת.</b> + בלוק סיום</div><div class="snd">♪ צליל לוגו</div></div></div>
+<div class="end">FORUM BUSINESS CLUB<small>&quot;רק תאריך.&quot; → <b>הכול ברשימה. הכול בקומה אחת.</b> → הבלוק האחיד (כתובת האתר היא המקום למלא את התאריך).</small></div>
+</details>
+
+<h2>למה אנחנו ממליצים על "ההזמנה"</h2>
+<div class="card why">
+  <p>כל הסרט בנוי על שתי מילים: <b>"פתח תקווה?"</b> בהתחלה, מפי מנכ"ל ספקן, ו<b>"פתח תקווה."</b> בסוף, על המרפסת מתחת למגדלים. הוא לא מתווכח עם החשש של האורחים, הוא פשוט מעביר אותם את החוויה. המעטפה בפתיחה עוצרת גלילה גם בלי סאונד, והסיום הוא המשפט שלך: סטנדרט בינלאומי לפתח תקווה.</p>
+</div>
+
+<h2 id="choose">הבחירה שלך</h2>
+<div class="card">
+<form id="f" novalidate>
+  <label class="f">איזה תסריט?</label>
+  <div class="pick"><label class="opt"><input type="radio" name="script" value="1 · פה אחד"><span>1 · פה אחד</span></label><label class="opt"><input type="radio" name="script" value="2 · 18:00–00:00"><span>2 · <span dir="ltr">18:00–00:00</span></span></label><label class="opt"><input type="radio" name="script" value="3 · שתי דקות לבמה"><span>3 · שתי דקות לבמה</span></label><label class="opt"><input type="radio" name="script" value="4 · ההזמנה"><span>4 · ההזמנה</span></label><label class="opt"><input type="radio" name="script" value="5 · הרשימה"><span>5 · הרשימה</span></label></div>
+  <label class="f">איזה מההדמיות היא חדר הישיבות האמיתי?<small>יש במתחם חדר ישיבות אחד, ובהדמיות יש שלוש גרסאות</small></label>
+  <div class="rooms">
+    <label class="opt"><input type="radio" name="room" value="עם אנשים (לוגו בעברית)"><span><img src="img/meet.jpg" alt="">עם אנשים</span></label>
+    <label class="opt"><input type="radio" name="room" value="ריק (שולחן ארוך)"><span><img src="img/meet_empty.jpg" alt="">ריק, שולחן ארוך</span></label>
+    <label class="opt"><input type="radio" name="room" value="עגול עם לוגו מואר"><span><img src="img/meet_round.jpg" alt="">עגול</span></label>
+  </div>
+  <label class="f" for="site">כתובת האתר לסוף הסרט</label>
+  <input type="text" id="site" dir="ltr" placeholder="www.">
+  <label class="f" for="park">איך עובדת החניה לאורחים?<small>חלק מהתסריטים עונים על זה במשפט אחד</small></label>
+  <input type="text" id="park" placeholder="למשל: חניון בבניין, חניה שמורה לאורחים">
+  <label class="f">לכתוב "נפתחים במרץ 2027" בסוף הסרט?</label>
+  <div class="yn"><label class="opt"><input type="radio" name="date" value="כן"><span>כן</span></label><label class="opt"><input type="radio" name="date" value="לא"><span>לא</span></label></div>
+  <label class="f" for="notes">הערות על התסריט שבחרת</label>
+  <textarea id="notes" placeholder="מה לשנות, להוסיף או להוריד"></textarea>
+  <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="err" id="err"></div>
+  <button class="btn" id="send" type="submit">שלח את הבחירה ←</button>
+</form>
+<div class="done" id="done"><div style="font-size:44px">🎬</div><h3>תודה! הבחירה אצלי.</h3><p style="color:var(--muted)">מכאן אני בונה את הסטוריבורד, תמונה לכל סצנה, ושולח לך לאישור לפני ההפקה.</p></div>
+</div>
+
+<div class="foot">מאיר לביא · AI Lab · <a href="https://wa.me/972546500795" style="color:var(--muted)">054-6500795</a></div>
+</div>
+<script>
+const WEB3FORMS_KEY='9ba5abaf-d501-44db-a33d-d5028c89e0ef', WA='972546500795';
+const f=document.getElementById('f'), err=document.getElementById('err');
+const val=n=>(f.querySelector('input[name='+n+']:checked')||{}).value||'';
+f.addEventListener('submit',async e=>{
+  e.preventDefault(); err.style.display='none';
+  const d={script:val('script'),room:val('room'),site:document.getElementById('site').value.trim(),park:document.getElementById('park').value.trim(),date:val('date'),notes:document.getElementById('notes').value.trim()};
+  if(!d.script){err.textContent='רק לבחור תסריט, וזהו.';err.style.display='block';return}
+  const btn=document.getElementById('send'); btn.disabled=true; btn.textContent='שולח…';
+  try{
+    if(!f.website.value){
+      const fd=new FormData(); fd.append('access_key',WEB3FORMS_KEY); fd.append('subject','🎬 בחירת תסריט — FORUM — דימה: '+d.script); fd.append('from_name','AI Lab · בחירת תסריט');
+      fd.append('Script',d.script); fd.append('MeetingRoom',d.room||'—'); fd.append('Website',d.site||'—'); fd.append('Parking',d.park||'—'); fd.append('March2027',d.date||'—'); fd.append('Notes',d.notes||'—'); fd.append('Time',new Date().toLocaleString('he-IL'));
+      const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:fd}); const j=await r.json(); if(!j.success) throw new Error(j.message);
+    }
+    f.style.display='none'; document.getElementById('done').classList.add('show');
+  }catch(x){
+    btn.disabled=false; btn.textContent='שלח את הבחירה ←';
+    const txt='בחרתי תסריט: '+d.script+'\nחדר ישיבות: '+(d.room||'—')+'\nאתר: '+(d.site||'—')+'\nחניה: '+(d.park||'—')+'\nמרץ 2027: '+(d.date||'—')+'\n'+d.notes;
+    err.innerHTML='השליחה נכשלה. <a style="color:#ffb3b3" target="_blank" href="https://wa.me/'+WA+'?text='+encodeURIComponent(txt)+'">לשלוח בוואטסאפ</a>'; err.style.display='block';
+  }
+});
+</script>
+</body>
+</html>
