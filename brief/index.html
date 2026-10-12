@@ -50,6 +50,9 @@ input:focus,textarea:focus{outline:none;border-color:var(--gold)}
 .done h3{font-size:24px;font-weight:800;margin:8px 0}
 .done p{color:var(--muted);font-size:15px;max-width:460px;margin:0 auto}
 .done ul{text-align:right;display:inline-block;margin:16px auto 0;color:var(--text);font-size:15px;line-height:1.9}
+.ref{border-radius:12px;overflow:hidden;background:#fff;max-width:400px;margin:0 auto}
+.ref iframe{display:block;width:100%;height:540px;border:0}
+.reflink{display:block;text-align:center;font-size:13px;color:var(--gold);margin:8px 0 4px;text-decoration:none}
 .foot{text-align:center;color:var(--dim);font-size:13px;margin-top:40px}
 @media (max-width:640px){h1{font-size:26px}.sec{padding:20px 16px}}
 </style>
@@ -59,113 +62,57 @@ input:focus,textarea:focus{outline:none;border-color:var(--gold)}
 <div class="top"><b>AI Lab · מאיר לביא</b><span>שאלון לסרטון התדמית</span></div>
 
 <div class="hero">
-  <div class="eyebrow">שלב 1 מתוך 5</div>
-  <h1>כמה שאלות, ומהן ייבנו שלושה תסריטים.</h1>
-  <p class="lead">כעשר דקות. אין תשובות נכונות או לא נכונות, ככל שתכתוב יותר בחופשיות, התסריטים יהיו יותר "אתה". אפשר לדלג על מה שלא רלוונטי.</p>
+  <div class="eyebrow">דימה, יוצאים לדרך</div>
+  <h1>12 שאלות, ומהן ייבנו שלושה תסריטים.</h1>
+  <p class="lead">כ-5 דקות. אפשר לענות בקצרה ולדלג על מה שלא רלוונטי. רק 4 שאלות הן חובה.</p>
   <div class="bar"><i id="bar"></i></div><div class="pct" id="pct">0% מולא</div>
 </div>
 
 <form id="f" novalidate>
 
 <div class="sec">
-  <h2><small>חלק א</small>פרטים</h2>
-  <div class="q"><label class="t">השם שלך <em>*</em></label><input type="text" name="Q01" data-q="שם מלא" autocomplete="name"></div>
-  <div class="q"><label class="t">טלפון <em>*</em></label><input type="tel" name="Q02" data-q="טלפון" autocomplete="tel" placeholder="050-0000000"></div>
-  <div class="q"><label class="t">שם המתחם (או שם זמני)</label><input type="text" name="Q03" data-q="שם המתחם"></div>
-  <div class="q"><label class="t">איפה המתחם?</label><div class="h">עיר, רחוב או אזור, קומה, מה רואים מהחלון</div><input type="text" name="Q04" data-q="מיקום"></div>
-  <div class="q"><label class="t">מתי נפתחים?</label><div class="h">תאריך משוער, ובאיזה שלב הבנייה נמצאת היום</div><input type="text" name="Q05" data-q="מועד פתיחה ושלב"></div>
-</div>
-
-<div class="sec">
-  <h2><small>חלק ב</small>המתחם</h2>
-  <div class="d">כדי שהסרטון יראה את מה שבאמת יש, ולא את מה שאני מדמיין.</div>
+  <h2><small>חלק א</small>המתחם</h2>
+  <div class="q"><label class="t">שם המתחם ואיפה הוא <em>*</em></label><div class="h">גם שם זמני מתאים</div><input type="text" name="Q01" data-q="שם ומיקום המתחם"></div>
   <div class="q"><label class="t">מה יש במתחם?</label><div class="opts" data-q="מה יש במתחם" data-multi>
-    <label class="opt"><input type="checkbox" name="Q06" value="עמדות עבודה פתוחות"><span>עמדות עבודה פתוחות</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="משרדים פרטיים"><span>משרדים פרטיים</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="חדרי ישיבות"><span>חדרי ישיבות</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="אולם כנסים"><span>אולם כנסים</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="בר"><span>בר</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="לאונג'"><span>לאונג'</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="מרפסת"><span>מרפסת</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="מטבח / קפה"><span>מטבח / קפה</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="חדרי שקט / טלפון"><span>חדרי שקט / טלפון</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="חניה"><span>חניה</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="אולפן / פודקאסט"><span>אולפן / פודקאסט</span></label>
-    <label class="opt"><input type="checkbox" name="Q06" value="חדר כושר / ספא"><span>חדר כושר / ספא</span></label>
+    <label class="opt"><input type="checkbox" name="Q02" value="עמדות עבודה"><span>עמדות עבודה</span></label>
+    <label class="opt"><input type="checkbox" name="Q02" value="משרדים פרטיים"><span>משרדים פרטיים</span></label>
+    <label class="opt"><input type="checkbox" name="Q02" value="חדרי ישיבות"><span>חדרי ישיבות</span></label>
+    <label class="opt"><input type="checkbox" name="Q02" value="אולם כנסים"><span>אולם כנסים</span></label>
+    <label class="opt"><input type="checkbox" name="Q02" value="בר"><span>בר</span></label>
+    <label class="opt"><input type="checkbox" name="Q02" value="לאונג'"><span>לאונג'</span></label>
+    <label class="opt"><input type="checkbox" name="Q02" value="מרפסת"><span>מרפסת</span></label>
   </div></div>
-  <div class="q"><label class="t">משהו שיש בו שלא מופיע ברשימה?</label><input type="text" name="Q07" data-q="עוד במתחם"></div>
-  <div class="q"><label class="t">כמה מקומות עבודה יש להשכרה, ובאילו מסלולים?</label><div class="h">למשל: 40 עמדות, 12 משרדים; חודשי, יומי, חברות</div><input type="text" name="Q08" data-q="היקף ומסלולי השכרה"></div>
-  <div class="q"><label class="t">מהו האזור שהכי גאה בו במתחם? <em>*</em></label><div class="h">המקום שבו אתה עוצר בסיור ואומר "תראה את זה"</div><textarea name="Q09" data-q="האזור שהכי גאה בו"></textarea></div>
-  <div class="q"><label class="t">מה עוד מייחד את המקום לעומת מתחמי עבודה אחרים?</label><div class="h">עיצוב, שירות, קהילה, מיקום, אירועים, שקט, יוקרה, כל דבר</div><textarea name="Q10" data-q="מה מייחד"></textarea></div>
+  <div class="q"><label class="t">איזה מקום במתחם הכי חשוב שיראו? <em>*</em></label><div class="h">המקום שבו אתה עוצר בסיור ואומר "תראה את זה"</div><input type="text" name="Q03" data-q="המקום הכי חשוב"></div>
+  <div class="q"><label class="t">מה מייחד אתכם לעומת מתחמים אחרים?</label><textarea name="Q04" data-q="מה מייחד"></textarea></div>
 </div>
 
 <div class="sec">
-  <h2><small>חלק ג</small>הלקוחות</h2>
-  <div class="d">הסרטון מדבר לאנשים מסוימים. ככל שנדע מי הם, השיחה בסרטון תישמע להם מוכרת.</div>
-  <div class="q"><label class="t">מי אמור לשכור מקום אצלך? <em>*</em></label><div class="opts" data-q="קהל יעד" data-multi>
-    <label class="opt"><input type="checkbox" name="Q11" value="עצמאים ופרילנסרים"><span>עצמאים ופרילנסרים</span></label>
-    <label class="opt"><input type="checkbox" name="Q11" value="סטארטאפים"><span>סטארטאפים</span></label>
-    <label class="opt"><input type="checkbox" name="Q11" value="עורכי דין / רואי חשבון / יועצים"><span>עו"ד / רו"ח / יועצים</span></label>
-    <label class="opt"><input type="checkbox" name="Q11" value="חברות שצריכות סניף"><span>חברות שצריכות סניף</span></label>
-    <label class="opt"><input type="checkbox" name="Q11" value="יזמים ואנשי נדל"ן"><span>יזמים ואנשי נדל"ן</span></label>
-    <label class="opt"><input type="checkbox" name="Q11" value="מארגני כנסים ואירועים"><span>מארגני כנסים ואירועים</span></label>
-    <label class="opt"><input type="checkbox" name="Q11" value="עובדים מהבית שרוצים מקום"><span>עובדים מהבית שרוצים מקום</span></label>
-  </div></div>
-  <div class="q"><label class="t">תאר לי את הלקוח האידיאלי כאילו הוא אדם אחד</label><div class="h">גיל בערך, במה עוסק, איך הוא עובד היום, מה חסר לו</div><textarea name="Q12" data-q="הלקוח האידיאלי"></textarea></div>
-  <div class="q"><label class="t">מה הדבר האחד שהכי חשוב שמי שרואה את הסרטון יבין? <em>*</em></label><div class="h">משפט אחד. אם יזכור רק דבר אחד, מה זה יהיה?</div><textarea name="Q13" data-q="המסר האחד"></textarea></div>
-  <div class="q"><label class="t">מה אנשים הכי מתלהבים ממנו כשהם שומעים על המקום?</label><textarea name="Q14" data-q="ממה מתלהבים"></textarea></div>
-  <div class="q"><label class="t">מה ההתנגדות או השאלה שתמיד חוזרת?</label><div class="h">למשל: "זה לא יקר?", "למה לא לעבוד מהבית?", "יש חניה?"</div><textarea name="Q15" data-q="התנגדות חוזרת"></textarea></div>
-  <div class="q"><label class="t">יש משפט שאתה אומר ללקוחות שתמיד עובד?</label><div class="h">הדרך שבה אתה מסביר את המקום במילים שלך</div><textarea name="Q16" data-q="משפט שתמיד עובד"></textarea></div>
+  <h2><small>חלק ב</small>הקהל והמסר</h2>
+  <div class="q"><label class="t">מי אמור לשכור אצלך?</label><div class="h">למשל: עצמאים, חברות, עורכי דין, מארגני כנסים</div><input type="text" name="Q05" data-q="קהל יעד"></div>
+  <div class="q"><label class="t">מה הדבר האחד שהצופה חייב להבין? <em>*</em></label><div class="h">משפט אחד</div><input type="text" name="Q06" data-q="המסר האחד"></div>
 </div>
 
 <div class="sec">
-  <h2><small>חלק ד</small>הסרטון</h2>
-  <div class="d">זה מה שיקבע את הטון של שלושת התסריטים.</div>
+  <h2><small>חלק ג</small>הסגנון</h2>
+  <div class="d">זה הסרטון ששלחת לי כהשראה:</div>
+  <div class="ref"><iframe src="https://www.instagram.com/reel/Dc_Em01A61E/embed" loading="lazy" allowtransparency="true" scrolling="no" title="סרטון ההשראה"></iframe></div>
+  <a class="reflink" href="https://www.instagram.com/reel/Dc_Em01A61E/" target="_blank" rel="noopener">לא נטען? לפתוח באינסטגרם ↗</a>
+  <div class="q"><label class="t">מה הכי אהבת בו, ומה פחות?</label><textarea name="Q07" data-q="מה אהב ברפרנס"></textarea></div>
+  <div class="q"><label class="t">יש עוד סרטונים שאהבת בסגנון הזה?</label><div class="h">אם כן, הדבק כאן קישורים (אינסטגרם, יוטיוב, טיקטוק, כל דבר). אפשר גם לשלוח לי בוואטסאפ.</div><textarea name="Q08" data-q="עוד סרטונים שאהב" placeholder="קישור בכל שורה"></textarea></div>
   <div class="q"><label class="t">איזו הרגשה הסרטון צריך להשאיר? <em>*</em></label><div class="opts" data-q="הרגשה">
-    <label class="opt"><input type="radio" name="Q17" value="יוקרתי ושקט"><span>יוקרתי ושקט</span></label>
-    <label class="opt"><input type="radio" name="Q17" value="אנרגטי ועסקי"><span>אנרגטי ועסקי</span></label>
-    <label class="opt"><input type="radio" name="Q17" value="חם וקהילתי"><span>חם וקהילתי</span></label>
-    <label class="opt"><input type="radio" name="Q17" value="מפתיע עם הומור"><span>מפתיע, עם הומור</span></label>
+    <label class="opt"><input type="radio" name="Q09" value="יוקרתי ושקט"><span>יוקרתי ושקט</span></label>
+    <label class="opt"><input type="radio" name="Q09" value="אנרגטי ועסקי"><span>אנרגטי ועסקי</span></label>
+    <label class="opt"><input type="radio" name="Q09" value="חם וקהילתי"><span>חם וקהילתי</span></label>
+    <label class="opt"><input type="radio" name="Q09" value="עם הומור"><span>עם הומור</span></label>
   </div></div>
-  <div class="q"><label class="t">מי שני האנשים שהכי טבעי לראות משוחחים במתחם?</label><div class="h">למשל: יזם ומשקיעה בבר, עורך דין ולקוח בחדר ישיבות, שני שותפים ליד החלון</div><textarea name="Q18" data-q="מי משוחח בסרטון"></textarea></div>
-  <div class="q"><label class="t">על מה הם מדברים?</label><div class="h">מה היית רוצה שייאמר בשיחה, גם אם זה רק רעיון כללי</div><textarea name="Q19" data-q="על מה השיחה"></textarea></div>
-  <div class="q"><label class="t">אילו אזורים חובה שיופיעו?</label><input type="text" name="Q20" data-q="אזורי חובה"></div>
-  <div class="q"><label class="t">יש משהו שאסור שיופיע או ייאמר?</label><div class="h">מתחרים, מחירים, הבטחות, מילים שאתה לא אוהב</div><input type="text" name="Q21" data-q="מה אסור"></div>
-  <div class="q"><label class="t">מחירים בסרטון?</label><div class="opts" data-q="מחירים בסרטון">
-    <label class="opt"><input type="radio" name="Q22" value="לא, לפרטים בפנייה"><span>לא, "לפרטים"</span></label>
-    <label class="opt"><input type="radio" name="Q22" value="כן, מחיר התחלה"><span>כן, "החל מ..."</span></label>
-    <label class="opt"><input type="radio" name="Q22" value="מבצע פתיחה"><span>מבצע פתיחה</span></label>
-  </div></div>
+  <div class="q"><label class="t">מי משוחח בסרטון, ועל מה?</label><div class="h">גם רעיון כללי מספיק. למשל: יזם ומשקיעה בבר, מדברים על עסקה שנסגרה</div><textarea name="Q10" data-q="מי משוחח ועל מה"></textarea></div>
   <div class="q"><label class="t">מה הצופה צריך לעשות בסוף?</label><div class="opts" data-q="פעולה בסוף">
-    <label class="opt"><input type="radio" name="Q23" value="לשלוח וואטסאפ"><span>לשלוח וואטסאפ</span></label>
-    <label class="opt"><input type="radio" name="Q23" value="להתקשר"><span>להתקשר</span></label>
-    <label class="opt"><input type="radio" name="Q23" value="להיכנס לאתר"><span>להיכנס לאתר</span></label>
-    <label class="opt"><input type="radio" name="Q23" value="להירשם לסיור"><span>להירשם לסיור</span></label>
+    <label class="opt"><input type="radio" name="Q11" value="וואטסאפ"><span>וואטסאפ</span></label>
+    <label class="opt"><input type="radio" name="Q11" value="להתקשר"><span>להתקשר</span></label>
+    <label class="opt"><input type="radio" name="Q11" value="להיכנס לאתר"><span>להיכנס לאתר</span></label>
+    <label class="opt"><input type="radio" name="Q11" value="לתאם סיור"><span>לתאם סיור</span></label>
   </div></div>
-  <div class="q"><label class="t">איפה הסרטון ירוץ?</label><div class="opts" data-q="ערוצים" data-multi>
-    <label class="opt"><input type="checkbox" name="Q24" value="אינסטגרם"><span>אינסטגרם</span></label>
-    <label class="opt"><input type="checkbox" name="Q24" value="פייסבוק"><span>פייסבוק</span></label>
-    <label class="opt"><input type="checkbox" name="Q24" value="טיקטוק"><span>טיקטוק</span></label>
-    <label class="opt"><input type="checkbox" name="Q24" value="לינקדאין"><span>לינקדאין</span></label>
-    <label class="opt"><input type="checkbox" name="Q24" value="אתר"><span>אתר</span></label>
-    <label class="opt"><input type="checkbox" name="Q24" value="מסכים במתחם"><span>מסכים במתחם</span></label>
-    <label class="opt"><input type="checkbox" name="Q24" value="מודעות ממומנות"><span>מודעות ממומנות</span></label>
-    <label class="opt"><input type="checkbox" name="Q24" value="וואטסאפ ללקוחות"><span>וואטסאפ ללקוחות</span></label>
-  </div></div>
-</div>
-
-<div class="sec">
-  <h2><small>חלק ה</small>חומרים וסיום</h2>
-  <div class="q"><label class="t">צבעי המותג ופונט, אם יש</label><div class="h">אם אין עדיין, כתוב "אין" ואבנה מההדמיות</div><input type="text" name="Q25" data-q="צבעים ופונט"></div>
-  <div class="q"><label class="t">עד מתי הסרטון צריך להיות מוכן?</label><input type="text" name="Q26" data-q="דדליין"></div>
-  <div class="q"><label class="t">משהו שחשוב לך שאדע?</label><textarea name="Q27" data-q="עוד משהו"></textarea></div>
-  <div class="q"><label class="t">מה תשלח לי בוואטסאפ אחרי השליחה?</label><div class="h">אסמן לעצמי מה לצפות</div><div class="opts" data-q="חומרים שיישלחו" data-multi>
-    <label class="opt"><input type="checkbox" name="Q28" value="הדמיות"><span>הדמיות</span></label>
-    <label class="opt"><input type="checkbox" name="Q28" value="לוגו"><span>לוגו</span></label>
-    <label class="opt"><input type="checkbox" name="Q28" value="פונט"><span>פונט</span></label>
-    <label class="opt"><input type="checkbox" name="Q28" value="צילומים מהשטח"><span>צילומים מהשטח</span></label>
-    <label class="opt"><input type="checkbox" name="Q28" value="תוכניות"><span>תוכניות</span></label>
-  </div></div>
+  <div class="q"><label class="t">משהו שאסור שיופיע או ייאמר?</label><input type="text" name="Q12" data-q="מה אסור"></div>
   <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
   <div class="err" id="err"></div>
   <button class="btn btn-gold" id="send" type="submit">שלח את השאלון ←</button>
@@ -180,6 +127,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--gold)}
     <li>📐 ההדמיות של המתחם (תמונות ווידאו, באיכות הכי גבוהה שיש)</li>
     <li>🔷 הלוגו (רצוי PNG על רקע שקוף)</li>
     <li>🔤 פונט או צבעי מותג, אם יש</li>
+    <li>🎬 עוד סרטונים שאהבת, אם לא הדבקת בשאלון</li>
   </ul>
   <br>
   <a class="btn btn-wa" id="wa" href="#" target="_blank" rel="noopener">לשלוח את החומרים בוואטסאפ ←</a>
@@ -211,11 +159,11 @@ function collect(){
 }
 f.addEventListener('submit',async e=>{
   e.preventDefault(); err.classList.remove('show');
-  const req=['Q01','Q02','Q09','Q11','Q13','Q17'];
+  const req=['Q01','Q03','Q06','Q09'];
   const ans=collect(); const miss=ans.find(a=>req.includes(a.n)&&!a.a);
   if(miss){err.textContent='נשארו כמה שאלות חובה (מסומנות ב-*): '+miss.q;err.classList.add('show');
     const el=f.querySelector('[name='+miss.n+']'); el&&el.closest('.q').scrollIntoView({behavior:'smooth',block:'center'}); return}
-  const name=ans[0].a, venue=ans[2].a||'המתחם';
+  const name='דימה', venue=ans[0].a||'המתחם';
   const btn=document.getElementById('send'); btn.disabled=true; btn.textContent='שולח…';
   const msg=`היי מאיר, מילאתי את השאלון לסרטון של ${venue}. מצרף כאן את ההדמיות והלוגו.`;
   document.getElementById('wa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
